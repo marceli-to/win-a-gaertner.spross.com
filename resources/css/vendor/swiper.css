@@ -1,0 +1,11 @@
+.swiper {
+  @apply h-full w-full
+}
+
+.swiper-slide {
+  @apply h-full w-full aspect-square
+}
+
+/* .swiper-button-disabled {
+  @apply hidden
+} */

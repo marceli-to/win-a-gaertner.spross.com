@@ -1,0 +1,13 @@
+@import "typo/webfonts.css";
+@import "vendor/swiper.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main {
+}
+
+main p:not(:last-of-type) {
+  @apply mb-20 lg:mb-40;
+}

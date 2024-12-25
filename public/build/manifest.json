@@ -1,0 +1,36 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-41385544.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/fonts/TheSans-B5Plain.woff": {
+    "file": "assets/TheSans-B5Plain-75c054f6.woff",
+    "src": "resources/fonts/TheSans-B5Plain.woff"
+  },
+  "resources/fonts/TheSans-B5Plain.woff2": {
+    "file": "assets/TheSans-B5Plain-88f8f859.woff2",
+    "src": "resources/fonts/TheSans-B5Plain.woff2"
+  },
+  "resources/fonts/TheSans-B6SemiBold.woff": {
+    "file": "assets/TheSans-B6SemiBold-5fe83d24.woff",
+    "src": "resources/fonts/TheSans-B6SemiBold.woff"
+  },
+  "resources/fonts/TheSans-B6SemiBold.woff2": {
+    "file": "assets/TheSans-B6SemiBold-bb12ed6c.woff2",
+    "src": "resources/fonts/TheSans-B6SemiBold.woff2"
+  },
+  "resources/fonts/TheSans-B7Bold.woff": {
+    "file": "assets/TheSans-B7Bold-6dad1b0e.woff",
+    "src": "resources/fonts/TheSans-B7Bold.woff"
+  },
+  "resources/fonts/TheSans-B7Bold.woff2": {
+    "file": "assets/TheSans-B7Bold-75b930bf.woff2",
+    "src": "resources/fonts/TheSans-B7Bold.woff2"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-e508ae40.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}
