@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-eb4ac333.css",
+    "file": "assets/app-3f186c04.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -28,8 +28,16 @@
     "file": "assets/TheSans-B7Bold-75b930bf.woff2",
     "src": "resources/fonts/TheSans-B7Bold.woff2"
   },
+  "resources/fonts/TheSans-B8ExtraBold.woff": {
+    "file": "assets/TheSans-B8ExtraBold-62863aee.woff",
+    "src": "resources/fonts/TheSans-B8ExtraBold.woff"
+  },
+  "resources/fonts/TheSans-B8ExtraBold.woff2": {
+    "file": "assets/TheSans-B8ExtraBold-8c5a2681.woff2",
+    "src": "resources/fonts/TheSans-B8ExtraBold.woff2"
+  },
   "resources/js/app.js": {
-    "file": "assets/app-330d8fc5.js",
+    "file": "assets/app-5e92792e.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }

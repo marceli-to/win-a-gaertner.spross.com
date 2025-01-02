@@ -52,4 +52,6 @@ function type() {
   setTimeout(type, timeout);
 }
 
-document.addEventListener("DOMContentLoaded", init);
+document.addEventListener("DOMContentLoaded", function() {
+  setTimeout(init, 500);
+});

@@ -12,10 +12,6 @@ export default {
   theme: {
     extend: {
 
-      // backgroundImage: {
-      //   'hero-image-sm': "url('../media/hero-flowerpower-sm.jpg')",
-      // },
-
       screens: {
         'xs': '440px',
       },
@@ -35,15 +31,15 @@ export default {
         'thesans-regular': ['TheSansRegular', ...defaultTheme.fontFamily.sans],
         'thesans-semibold': ['TheSansSemibold', ...defaultTheme.fontFamily.sans],
         'thesans-bold': ['TheSansBold', ...defaultTheme.fontFamily.sans],
+        'thesans-extrabold': ['TheSansExtraBold', ...defaultTheme.fontFamily.sans],
       },
 
       fontSize: {
-        'lg': '1.5rem', // 24px
-        'xl': '2.25rem', // 36px
-        '2xl': '3rem', // 48px
-        '3xl': '2rem', // 32px
-        '4xl': '4rem', // 64px
-        '5xl': '8rem', // 128px
+        'sm': '1rem', // 16px
+        'md': '1.125rem', // 18px
+        'lg': '1.25rem', // 20px
+        'xl': '1.5rem', // 24px
+        '2xl': '1.875rem', // 30px
       },
 
     },

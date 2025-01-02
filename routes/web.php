@@ -12,4 +12,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'home');
+Route::view('/', 'home')->name('page.home');
+Route::view('/wettbewerb', 'competition')->name('page.competition');
+Route::view('/vielen-dank', 'thanks')->name('page.thanks');

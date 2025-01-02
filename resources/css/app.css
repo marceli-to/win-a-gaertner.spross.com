@@ -12,6 +12,10 @@ main p:not(:last-of-type) {
   @apply mb-20 lg:mb-40;
 }
 
+strong {
+  @apply font-thesans-extrabold;
+}
+
 h1 {
   @apply font-thesans-semibold text-[2.625rem] xs:text-[3.75rem] sm:text-[5rem] md:text-[6rem] lg:text-[7.5rem] xl:text-[8.75rem] leading-none;
 }
