@@ -17,7 +17,7 @@ export default {
       // },
 
       screens: {
-        'xs': '500px',
+        'xs': '440px',
       },
 
       dropShadow: {
@@ -38,7 +38,9 @@ export default {
       },
 
       fontSize: {
-
+        'lg': '1.5rem', // 24px
+        'xl': '2.25rem', // 36px
+        '2xl': '3rem', // 48px
         '3xl': '2rem', // 32px
         '4xl': '4rem', // 64px
         '5xl': '8rem', // 128px

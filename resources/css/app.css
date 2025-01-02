@@ -11,3 +11,25 @@ main {
 main p:not(:last-of-type) {
   @apply mb-20 lg:mb-40;
 }
+
+h1 {
+  @apply font-thesans-semibold text-[2.625rem] xs:text-[3.75rem] sm:text-[5rem] md:text-[6rem] lg:text-[7.5rem] xl:text-[8.75rem] leading-none;
+}
+
+.lead {
+  @apply text-[1.3125rem] xs:text-[1.875rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.75rem] xl:text-[4.25rem] leading-[1.15] sm:leading-[1.07] text-meadow hyphens-auto md:mt-20 lg:mt-30 xl:mt-40;
+}
+
+/* #typewriter {
+  @apply border-r-2 text-white;
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { 
+    border-color: transparent
+ }
+  50% { 
+    border-color: #fff;
+  }
+} */
