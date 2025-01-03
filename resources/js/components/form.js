@@ -21,19 +21,19 @@
 
         if (label) {
           label.classList.remove('hidden');
-          label.classList.remove('!text-red-500');
+          label.classList.remove('!text-copper');
         }
 
-        if (labelGroups) {
+        if (this.type == 'radio' && labelGroups) {
           labelGroups.forEach(labelGroup => {
-            labelGroup.classList.remove('!text-red-500');
+            labelGroup.classList.remove('!text-copper');
           });
         }
 
         if (error) {
           error.classList.add('hidden');
         }
-        this.classList.remove('!border-red-500');
+        this.classList.remove('!border-copper/50');
       });
     });
   });

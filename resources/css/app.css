@@ -24,6 +24,10 @@ h1 {
   @apply text-[1.3125rem] xs:text-[1.875rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.75rem] xl:text-[4.25rem] leading-[1.15] sm:leading-[1.07] text-meadow hyphens-auto md:mt-20 lg:mt-30 xl:mt-40;
 }
 
+input[type="radio"]:checked + svg {
+  @apply block;
+}
+
 /* #typewriter {
   @apply border-r-2 text-white;
   animation: blink 0.75s step-end infinite;

@@ -4,4 +4,4 @@
   wire:model="{{ $name }}" 
   name="{{ $name }}" 
   id="{{ $id }}"
-  {{ $attributes->merge(['class' => 'appearance-none m w-14 h-14 lg:w-15 lg:h-15 ring-0 focus:ring-0 !ring-offset-0 !outline-none border-fern text-fern bg-white accent-fern']) }}>
+  {{ $attributes->merge(['class' => 'appearance-none size-16 lg:size-18 ring-0 focus:ring-0 !ring-offset-0 !outline-none border-fern/50 border-2 text-fern bg-white accent-fern']) }}>

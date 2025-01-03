@@ -1,4 +1,4 @@
 @props(['message'])
-<span {{ $attributes->merge(['class' => 'text-red-500 js-error']) }}>
+<span {{ $attributes->merge(['class' => 'text-copper js-error']) }}>
   {{ $message }}
 </span> 
