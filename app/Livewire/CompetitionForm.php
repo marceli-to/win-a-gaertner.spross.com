@@ -8,7 +8,7 @@ use App\Notifications\ParticipantConfirmEmail;
 
 class CompetitionForm extends Component
 {
-  #[Rule('required')]
+  #[Rule('accepted')]
   public $selection;
 
   #[Rule('required')]
@@ -29,8 +29,8 @@ class CompetitionForm extends Component
   #[Rule('required')]
   public $phone;
 
-  #[Rule('required')]
-  public $privacy;
+  #[Rule('accepted')]
+  public $terms;
 
   public function save()
   {
@@ -52,6 +52,21 @@ class CompetitionForm extends Component
     session()->flash('status', 'Inquiry was submitted');
     $this->reset();
     redirect()->route('page.home');
+  }
+
+  public function messages()
+  {
+    return [
+      'selection.accepted' => 'Sofortpreis muss ausgewählt werden',
+      'name.required' => 'Vor- und Nachname fehlt',
+      'street.required' => 'Strasse, Nr. fehlt',
+      'zip.required' => 'PLZ fehlt',
+      'city.required' => 'Ort fehlt',
+      'email.email' => 'E-Mail ist ungültig',
+      'email.required' => 'E-Mail fehlt',
+      'phone.required' => 'Telefon fehlt',
+      'terms.accepted' => 'Teilnahmebedingungen müssen akzeptiert werden',
+    ];
   }
 
   public function render()

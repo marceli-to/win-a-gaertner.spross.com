@@ -2,11 +2,17 @@ const words = [
   "Baumcutter?", 
   "Leafbläser?", 
   "Treeschneider?",
+  "Plantpfleger?",
+  "Staudentrimmer?"
 ];
 
-let wordIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
+// Change initial wordIndex to point to "Staudentrimmer?"
+let wordIndex = words.length - 1;
+// Set charIndex to full length of first word
+let charIndex = words[wordIndex].length;
+// Start with delete animation
+let isDeleting = true;
+
 let isWaitingAfterDelete = false;
 let typewriterElement;
 
@@ -53,5 +59,5 @@ function type() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  setTimeout(init, 500);
+  setTimeout(init, 1000);
 });

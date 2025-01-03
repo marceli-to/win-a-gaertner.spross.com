@@ -1,4 +1,4 @@
-<header class="pt-20 lg:pt-30">
+<header class="pt-30">
   <x-layout.inner>
     <a 
       href="{{ route('page.home') }}"

@@ -23,4 +23,4 @@
 @vite('resources/css/app.css')
 @livewireStyles
 </head>
-<body class="{{ Route::is('page.competition') ? 'bg-white' : 'bg-fern'}} antialiased font-thesans-regular text-lg md:text-xl lg:text-2xl leading-[1.2] flex flex-col min-h-full">
+<body class="{{ Route::is('page.competition') ? 'bg-white text-fern' : 'bg-fern text-white' }} antialiased font-thesans-regular text-lg md:text-xl lg:text-2xl leading-[1.2] flex flex-col min-h-full">
