@@ -8,26 +8,26 @@ use App\Notifications\ParticipantConfirmEmail;
 
 class CompetitionForm extends Component
 {
-  #[Rule('accepted')]
-  public $selection;
+  #[Rule('required')]
+  public $selection = 'Baumcheck';
 
   #[Rule('required')]
-  public $name;
+  public $name = 'Marcel Stadelmann';
 
   #[Rule('required')]
-  public $street;
+  public $street = 'Feldgasse 3';
 
   #[Rule('required')]
-  public $zip;
+  public $zip = '8000';
 
   #[Rule('required')]
-  public $city;
+  public $city = 'Zürich';
 
   #[Rule('required', 'email')]
-  public $email;
+  public $email = 'm@marceli.to';
 
   #[Rule('required')]
-  public $phone;
+  public $phone = '079 123 45 67';
 
   #[Rule('accepted')]
   public $terms;
@@ -47,23 +47,22 @@ class CompetitionForm extends Component
         'phone',
       ])
     );
-
-    Notification::route('mail', $contact->email)->notify(new ContactUserEmail($contact));
-    session()->flash('status', 'Inquiry was submitted');
     $this->reset();
-    redirect()->route('page.home');
+
+    Notification::route('mail', $this->email)->notify(new ParticipantConfirmEmail($participant));
+    session()->flash('status', 'Inquiry was submitted');
   }
 
   public function messages()
   {
     return [
-      'selection.accepted' => 'Sofortpreis muss ausgewählt werden',
-      'name.required' => 'Vor- und Nachname fehlt',
+      'selection.required' => 'Sofortpreis muss ausgewählt werden',
+      'name.required' => 'Vor- und/oder Nachname fehlt',
       'street.required' => 'Strasse, Nr. fehlt',
       'zip.required' => 'PLZ fehlt',
       'city.required' => 'Ort fehlt',
-      'email.email' => 'E-Mail ist ungültig',
       'email.required' => 'E-Mail fehlt',
+      'email.email' => 'E-Mail ist ungültig',
       'phone.required' => 'Telefon fehlt',
       'terms.accepted' => 'Teilnahmebedingungen müssen akzeptiert werden',
     ];
