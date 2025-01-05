@@ -3,7 +3,6 @@
     <div class="relative">
       <a href="javascript:;" x-on:click="open = false">
         Vielen Dank, wir haben Ihre Anfrage erhalten.
-        <x-icons.cross class="!w-15 !h-15 absolute -top-5 -right-20" />
       </a>
     </div>
   </div>
