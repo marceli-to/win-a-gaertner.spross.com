@@ -9,25 +9,25 @@ use App\Notifications\ParticipantConfirmEmail;
 class CompetitionForm extends Component
 {
   #[Rule('required')]
-  public $selection = 'Baumcheck';
+  public $selection;
 
   #[Rule('required')]
-  public $name = 'Marcel Stadelmann';
+  public $name;
 
   #[Rule('required')]
-  public $street = 'Feldgasse 3';
+  public $street;
 
   #[Rule('required')]
-  public $zip = '8000';
+  public $zip;
 
   #[Rule('required')]
-  public $city = 'Zürich';
+  public $city;
 
   #[Rule('required', 'email')]
-  public $email = 'm@marceli.to';
+  public $email;
 
   #[Rule('required')]
-  public $phone = '079 123 45 67';
+  public $phone;
 
   #[Rule('accepted')]
   public $terms;
