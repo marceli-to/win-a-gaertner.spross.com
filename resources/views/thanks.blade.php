@@ -9,7 +9,7 @@
     <div class="lead !hyphens-none mb-16 lg:mb-24">
       Sie haben erfolgreich an dem Gewinnspiel teilgenommen.
     </div>
-    <p>Wir geben ihnen Bescheid sobald die Verlosung stattgefunden hat. (Datum). <br>In der Zwischenzeit greifen Sie sich Ihren Sofortpreis. Ihr Sofortpreis ist ein Baumcheck!</p>
+    <p>Wir geben ihnen Bescheid sobald die Verlosung stattgefunden hat. (Datum).<br>In der Zwischenzeit greifen Sie sich Ihren Sofortpreis. Ihr Sofortpreis ist {{ $participant->selection == 'Baumcheck' ? 'ein' : 'eine'}} {{ $participant->selection}}!</p>
     <p><strong>Jetzt Termin vereinbaren und Sofortpreis einlösen.</strong></p>
   </div>
 </x-layout.inner>

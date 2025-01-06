@@ -15,12 +15,16 @@ use App\Models\Participant;
 
 Route::view('/', 'home')->name('page.home');
 Route::view('/wettbewerb', 'competition')->name('page.competition');
-Route::view('/vielen-dank', 'thanks')->name('page.thanks');
+
+Route::get('/vielen-dank/{uuid}', function ($uuid) {
+  $participant = Participant::where('uuid', $uuid)->first();
+  return view('thanks', ['participant' => $participant]);
+})->name('page.thanks');
 
 Route::get('/email/bestatigen/{uuid}', function ($uuid) {
   $participant = Participant::where('uuid', $uuid)->first();
   if ($participant) {
     $participant->update(['email_verified_at' => now()]);
-    return redirect()->route('page.thanks');
+    return redirect()->route('page.thanks', [$participant->uuid]);
   }
 })->name('page.verify');
