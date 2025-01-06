@@ -21,7 +21,7 @@ Route::get('/vielen-dank/{uuid}', function ($uuid) {
   return view('thanks', ['participant' => $participant]);
 })->name('page.thanks');
 
-Route::get('/email/bestatigen/{uuid}', function ($uuid) {
+Route::get('/email/bestaetigen/{uuid}', function ($uuid) {
   $participant = Participant::where('uuid', $uuid)->first();
   if ($participant) {
     $participant->update(['email_verified_at' => now()]);

@@ -11,6 +11,21 @@
     </div>
     <p>Wir geben ihnen Bescheid sobald die Verlosung stattgefunden hat. (Datum).<br>In der Zwischenzeit greifen Sie sich Ihren Sofortpreis. Ihr Sofortpreis ist {{ $participant->selection == 'Baumcheck' ? 'ein' : 'eine'}} {{ $participant->selection}}!</p>
     <p><strong>Jetzt Termin vereinbaren und Sofortpreis einlösen.</strong></p>
+    <div class="mt-15 lg:mt-20 flex items-center gap-x-15 lg:gap-x-30">
+      <a 
+        href="tel:043 333 33 88" 
+        class="bg-copper hover:bg-white hover:text-fern inline-flex items-center hover:bg-olive transition-colors text-white whitespace-nowrap px-12 lg:px-16 py-6 lg:py-10 leading-none rounded-full group"
+        title="Jetzt Termin vereinbaren und Sofortpreis einlösen.">
+        <x-icons.phone class="w-18 lg:w-24 h-auto mr-8 lg:mr-10 text-white group-hover:text-fern transition-colors" />
+        043 333 33 88
+      </a>
+      <a 
+        href="mailto:"
+        title="E-Mail schreiben"
+        class="underline underline-offset-4 hover:no-underline decoration-1 text-md lg:text-lg">
+        E-Mail schreiben
+      </a>
+    </div>
   </div>
 </x-layout.inner>
 @endsection

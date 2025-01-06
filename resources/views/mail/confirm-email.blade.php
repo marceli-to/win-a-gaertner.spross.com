@@ -7,6 +7,6 @@
     Falls Sie am Wettbewerb nicht teilgenommen haben oder diese E-Mail fälschlicherweise erhalten haben, können Sie diese Nachricht ignorieren.
   </div>  
   <div class="text-xsmall">
-    Wenn Sie Probleme haben, den "E-Mail Adresse überprüfen"-Button zu klicken, kopieren Sie die URL unten und fügen Sie sie in Ihren Webbrowser ein:<br>https://wwww........
+    Wenn Sie Probleme haben, den "E-Mail Adresse überprüfen"-Button zu klicken, kopieren Sie die URL unten und fügen Sie sie in Ihren Webbrowser ein:<br>{{ route('page.verify', ['uuid' => $data->uuid]) }}
   </div>
 </x-mail::message>
