@@ -1,0 +1,1 @@
+<img src="/media/envelope.png" width="180" height="181" alt="Envelope" {{ $attributes->merge(['class' => '']) }} />

@@ -21,7 +21,7 @@ return new class extends Migration
           $table->string('city');
           $table->string('email');
           $table->string('phone');
-          $table->timestamp('confirmed_at')->nullable();
+          $table->timestamp('email_verified_at')->nullable();
           $table->timestamps();
         });
     }

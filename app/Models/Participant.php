@@ -13,7 +13,7 @@ class Participant extends Model
     'city',
     'email',
     'phone',
-    'confirmed_at',
+    'email_verified_at',
   ];
 
   protected static function boot()

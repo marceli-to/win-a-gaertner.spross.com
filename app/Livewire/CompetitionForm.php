@@ -32,25 +32,26 @@ class CompetitionForm extends Component
   #[Rule('accepted')]
   public $terms;
 
+  public $is_submitted = FALSE;
+
   public function save()
   {
     $this->validate();
     
-    $participant = Participant::create(
-      $this->only([
-        'selection',
-        'name', 
-        'street',
-        'zip',
-        'city',
-        'email', 
-        'phone',
-      ])
+    $participant = Participant::firstOrCreate(
+      ['email' => $this->email],
+      [
+        'selection' => $this->selection,
+        'name' => $this->name,
+        'street' => $this->street,
+        'zip' => $this->zip,
+        'city' => $this->city,
+        'phone' => $this->phone,
+      ]
     );
-    $this->reset();
-
     Notification::route('mail', $this->email)->notify(new ParticipantConfirmEmail($participant));
-    session()->flash('status', 'Inquiry was submitted');
+    $this->reset();
+    $this->is_submitted = TRUE;
   }
 
   public function messages()

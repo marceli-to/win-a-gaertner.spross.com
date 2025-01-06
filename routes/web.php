@@ -1,5 +1,6 @@
 <?php
 use Illuminate\Support\Facades\Route;
+use App\Models\Participant;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'home')->name('page.home');
 Route::view('/wettbewerb', 'competition')->name('page.competition');
 Route::view('/vielen-dank', 'thanks')->name('page.thanks');
+
+Route::get('/email/bestatigen/{uuid}', function ($uuid) {
+  $participant = Participant::where('uuid', $uuid)->first();
+  if ($participant) {
+    $participant->update(['email_verified_at' => now()]);
+    return redirect()->route('page.thanks');
+  }
+})->name('page.verify');
