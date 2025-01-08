@@ -23,7 +23,7 @@ class CompetitionForm extends Component
   #[Rule('required')]
   public $city;
 
-  #[Rule('required', 'email')]
+  #[Rule('required|email')]
   public $email;
 
   #[Rule('required')]

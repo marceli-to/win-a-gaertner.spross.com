@@ -4,7 +4,7 @@
       <div class="md:inline">&copy; Spross-Gruppe, {{ date('Y') }}</div><span class="hidden lg:inline"> &mdash; </span>
       <div class="flex flex-wrap items-center justify-center gap-y-5 gap-x-10 lg:gap-x-5">
         <a 
-          href="https://www.spross.com/meta/datenschutz"
+          href="{{ route('page.conditions') }}"
           target="_blank"
           title="Teilnahmebedingungen"
           class="inline-block mr-3 hover:text-moss transition-colors hover:underline decoration-1 underline-offset-4">
