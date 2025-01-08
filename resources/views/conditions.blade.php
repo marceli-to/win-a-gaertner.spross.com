@@ -3,8 +3,8 @@
 <x-layout.inner class="text-fern">
 
 
-  <div class="max-w-prose me-60 lg:px-102">
-    <div class="text-xl">
+  <div class="max-w-prose me-30 lg:me-60 lg:px-102">
+    <div class="text-lg lg:text-xl">
 
         <h3 class="font-thesans-extrabold mb-[1.2em] lg:mt-40">Teilnahmebedingungen</h3>
 

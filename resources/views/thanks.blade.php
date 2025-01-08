@@ -9,7 +9,7 @@
     <div class="lead !hyphens-none mb-16 lg:mb-24">
       Ihre E-Mail-Adresse ist bestätigt und Sie sind beim Wettbewerb dabei.
     </div>
-    <p>Ob Sie den Hauptpreis gewonnen haben, erfahren Sie nach der Verlosung am  XXXXX.<br>
+    <p>Ob Sie den Hauptpreis gewonnen haben, erfahren Sie nach der Verlosung im Frühling 2025.<br>
     Ihren Sofortpreis –
 
      @if($participant->selection == 'Gartenpflege')  den Gartenpflege-Rabatt von CHF 300.– @endif
@@ -20,7 +20,7 @@
 
 
  </p>
-    <p><strong>Vereinbaren Sie jetzt einen Termin und lösen Sie Ihren Sofortpreis:</strong></p>
+    <p><strong class="font-thesans-extrabold">Vereinbaren Sie jetzt einen Termin und lösen Sie Ihren Sofortpreis:</strong></p>
     <div class="mt-15 lg:mt-20 flex items-center gap-x-15 lg:gap-x-30">
       <a
         href="tel:043 333 33 88"

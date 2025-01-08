@@ -12,8 +12,9 @@
       <p>In Ihrer Mailbox finden Sie ein Mail, um Ihre E-Mail-Adresse zu bestätigen. Sobald das erledigt ist, sind Sie beim Wettbewerb dabei. Wir drücken schon mal die Daumen!</p>
     </div>
   @else
-      <p class="max-w-prose mb-48">Gewinnen Sie mit etwas Glück ein <strong>Gartenabo im Wert von CHF 5000.–</strong> für die professionelle Pflege Ihres Gartens. Alle Teilnehmenden bekommen einen Sofortpreis nach Wahl. <strong>Wettbewerbsschluss ist der 25.10.2024.</strong></p>
+      <p class="max-w-prose mb-48">
 
+      Gewinnen Sie mit etwas Glück ein <strong class="font-thesans-extrabold">Gartenabo im Wert von CHF 5000.–</strong> für die professionelle Pflege Ihres Gartens. Alle Teilnehmenden bekommen einen Sofortpreis nach Wahl. </p>
 
     <div class="max-w-3xl mx-auto">
       <x-layout.grid class="sm:gap-y-15 md:gap-y-20">
@@ -23,22 +24,22 @@
           <h2 class="font-thesans-extrabold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-10 lg:mb-24">
             Ich hätte gerne diesen Sofortpreis
           </h2>
-          <div class="flex items-center mb-5 lg:mb-24 radio-row">
+          <div class="flex items-center mb-10 lg:mb-5 lg:mb-24 radio-row">
             <x-form.radio name="selection" id="selection_one" class="mt-4 xs:mt-3" value="Gartenpflege" />
             <x-form.checkbox-label for="selection_one" class="!ml-10 lg:!ml-15 mt-4 text-2xl md:text-3xl lg:text-4xl leading-none js-label-group {{ $errors->has('selection') ? '!text-copper' : '' }}">
-              <strong>300 CHF Rabatt auf Gartenpflege</strong> (gültig für Aufträge ab CHF 1500.–)
+              <strong class="font-thesans-extrabold">300 CHF Rabatt auf Gartenpflege</strong><p class="text-lg lg:text-2xl mt-[0.35em] lg:mt-[0.18em]">Gültig für Aufträge ab CHF 1500.–</p>
             </x-form.checkbox-label>
           </div>
-          <div class="flex items-center mb-5 lg:mb-24 radio-row">
+          <div class="flex items-center mb-10 lg:mb-5 lg:mb-24 radio-row">
             <x-form.radio name="selection" id="selection_two" class="mt-4 xs:mt-3" value="Gartenberatung" />
             <x-form.checkbox-label for="selection_two" class="!ml-10 lg:!ml-15 mt-4 text-2xl md:text-3xl lg:text-4xl leading-none js-label-group {{ $errors->has('selection') ? '!text-copper' : '' }}">
-              <strong>Eine Gartenberatung</strong> im Wert von CHF 150.–
+              <strong class="font-thesans-extrabold">Eine Gartenberatung</strong><p class="text-lg lg:text-2xl mt-[0.35em] lg:mt-[0.18em]">Im Wert von CHF 150.–</p>
             </x-form.checkbox-label>
           </div>
-          <div class="flex items-center mb-5 lg:mb-24 radio-row">
+          <div class="flex items-center mb-10 lg:mb-5 lg:mb-24 radio-row">
             <x-form.radio name="selection" id="selection_three" class="mt-4 xs:mt-3" value="Baumcheck" />
             <x-form.checkbox-label for="selection_three" class="!ml-10 lg:!ml-15 mt-4 text-2xl md:text-3xl lg:text-4xl leading-none js-label-group {{ $errors->has('selection') ? '!text-copper' : '' }}">
-              <strong>Ein Baumcheck</strong> im Wert von CHF 150.–
+              <strong class="font-thesans-extrabold">Ein Baumcheck</strong><p class="text-lg lg:text-2xl mt-[0.35em] lg:mt-[0.18em]">Im Wert von CHF 150.–</p>
             </x-form.checkbox-label>
           </div>
         </x-layout.span>
@@ -96,7 +97,7 @@
           <div class="flex items-start">
             <x-form.checkbox name="terms" id="terms" isWire="true" class="mt-4 xs:mt-3" />
             <x-form.checkbox-label for="terms" class="!ml-10 text-md lg:text-lg js-label {{ $errors->has('terms') ? '!text-copper' : '' }}">
-              Ich habe die <a href="{{ route('page.conditions') }}" title="Teilnahmebedingungen anzeigen" target="_blank" class="underline underline-offset-4 decoration-1 hover:no-underline">Teilnahmebedingungen</a> gelesen.
+              Ich habe die <a href="{{ route('page.conditions') }}" title="Teilnahmebedingungen anzeigen"  class="underline underline-offset-4 decoration-1 hover:no-underline">Teilnahmebedingungen</a> gelesen und bin damit einverstanden.
             </x-form.checkbox-label>
           </div>
         </x-layout.span>
