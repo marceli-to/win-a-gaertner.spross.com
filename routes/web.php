@@ -15,6 +15,7 @@ use App\Models\Participant;
 
 Route::view('/', 'home')->name('page.home');
 Route::view('/wettbewerb', 'competition')->name('page.competition');
+Route::view('/teilnahmebedingungen', 'conditions')->name('page.conditions');
 
 Route::get('/vielen-dank/{uuid}', function ($uuid) {
   $participant = Participant::where('uuid', $uuid)->first();

@@ -18,5 +18,7 @@ yarn-error.log
 /.vscode
 INSTALL.txt
 /public/robots.txt
-
+/composer.phar
+/.nova
+/composer.lock
 /public/media/luppmenpark.mp4

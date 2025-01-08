@@ -3,6 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PZXBFSD');</script>
+<!-- End Google Tag Manager -->
+
+
 <title>{{ env('APP_NAME') }}</title>
 <meta name="description" content="{{ env('APP_DESCRIPTION') }}">
 <meta property="og:title" content="{{ env('APP_NAME') }}">
@@ -23,4 +33,8 @@
 @vite('resources/css/app.css')
 @livewireStyles
 </head>
-<body class="{{ Route::is('page.competition') ? 'bg-white text-fern' : 'bg-fern text-white' }} antialiased font-thesans-regular text-lg md:text-xl lg:text-2xl leading-[1.2] flex flex-col min-h-full">
+<body class="{{ Route::is('page.competition') || Route::is('page.conditions') ? 'bg-white text-fern' : 'bg-fern text-white' }} antialiased font-thesans-regular text-lg md:text-xl lg:text-2xl leading-[1.2] flex flex-col min-h-full">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src=https://www.googletagmanager.com/ns.html?id=GTM-PZXBFSD
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->

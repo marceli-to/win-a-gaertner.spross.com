@@ -2,18 +2,22 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 export default {
-  
+
   content: [
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
     "./resources/**/*.vue",
   ],
-  
+
   theme: {
     extend: {
 
       screens: {
         'xs': '440px',
+      },
+
+      borderWidth: {
+         3: '3px', // Adds a `border-3` class
       },
 
       dropShadow: {
@@ -25,6 +29,8 @@ export default {
         'fern': '#376C1B',
         'meadow': '#A8E189',
         'copper': '#D65F28',
+        'fern-sat': '#4D9526',
+
       },
 
       fontFamily: {
@@ -40,7 +46,7 @@ export default {
         'lg': '1.25rem', // 20px
         'xl': '1.5rem', // 24px
         '2xl': '1.875rem', // 30px
-        '3xl': '2.5rem', // 40px
+        '3xl': '2.4rem', // 40px
         '4xl': '3rem', // 48px
         '5xl': '4rem', // 64px
       },

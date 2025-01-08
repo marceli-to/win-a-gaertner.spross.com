@@ -41,7 +41,7 @@ class ParticipantConfirmEmail extends Notification
     return (new MailMessage)
       ->from(env('MAIL_FROM_ADDRESS'))
       ->replyTo(env('MAIL_TO'))
-      ->subject('E-Mail-Bestätigung Gewinnspiel spross.com')
+      ->subject('Win a Gärtner: Bitte E-Mail-Adresse bestätigen')
       ->markdown('mail.confirm-email', ['data' => $this->data]);
   }
 
