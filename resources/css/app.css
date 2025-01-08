@@ -14,6 +14,7 @@ main p:not(:last-of-type) {
 
 strong {
   @apply font-thesans-extrabold;
+  font-weight: normal;
 }
 
 h1 {
