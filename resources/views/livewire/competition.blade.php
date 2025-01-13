@@ -39,7 +39,7 @@
           <div class="flex items-center mb-10 lg:mb-5 lg:mb-24 radio-row">
             <x-form.radio name="selection" id="selection_three" class="mt-4 xs:mt-3" value="Baumcheck" />
             <x-form.checkbox-label for="selection_three" class="!ml-10 lg:!ml-15 mt-4 text-2xl md:text-3xl lg:text-4xl leading-none js-label-group {{ $errors->has('selection') ? '!text-copper' : '' }}">
-              <strong class="font-thesans-extrabold">Ein Baumcheck</strong><p class="text-lg lg:text-2xl mt-[0.35em] lg:mt-[0.18em]">Im Wert von CHF 150.–</p>
+              <strong class="font-thesans-extrabold">Einen Baumcheck</strong><p class="text-lg lg:text-2xl mt-[0.35em] lg:mt-[0.18em]">Im Wert von CHF 150.–</p>
             </x-form.checkbox-label>
           </div>
         </x-layout.span>

@@ -9,18 +9,19 @@
     <div class="lead !hyphens-none mb-16 lg:mb-24">
       Ihre E-Mail-Adresse ist bestätigt und Sie sind beim Wettbewerb dabei.
     </div>
-    <p>Ob Sie den Hauptpreis gewonnen haben, erfahren Sie nach der Verlosung im Frühling 2025.<br>
-    Ihren Sofortpreis –
-
-     @if($participant->selection == 'Gartenpflege')  den Gartenpflege-Rabatt von CHF 300.– @endif
-     @if($participant->selection == 'Gartenberatung')  die Gartenberatung im Wert von CHF 150.– @endif
-     @if($participant->selection == 'Baumcheck') den Baumcheck im Wert von CHF 150.– @endif
-
-     haben Sie aber jetzt schon auf sicher!
-
-
- </p>
-    <p><strong class="font-thesans-extrabold">Vereinbaren Sie jetzt einen Termin und lösen Sie Ihren Sofortpreis:</strong></p>
+    <p>
+      Ob Sie den Hauptpreis gewonnen haben, erfahren Sie nach der Verlosung im Frühling 2025.<br>
+      @if ($participant->selection == 'Gartenpflege')
+        Ihren Sofortpreis – 300 CHF Rabatt auf eine Gartenpflege. Gültig für Aufträge ab CHF 1500 – haben Sie aber jetzt schon auf sicher.
+      @endif
+      @if ($participant->selection == 'Gartenberatung')
+        Ihren Sofortpreis – Eine Gartenberatung im Wert von CHF 150 – haben Sie aber jetzt schon auf sicher.
+      @endif
+      @if ($participant->selection == 'Baumcheck')
+        Ihren Sofortpreis – Einen Baumcheck im Wert von CHF 150 – haben Sie aber jetzt schon auf sicher.
+      @endif
+    </p>
+    <p><strong class="font-thesans-extrabold">Vereinbaren Sie jetzt einen Termin und lösen Sie Ihren Sofortpreis ein:</strong></p>
     <div class="mt-15 lg:mt-20 flex items-center gap-x-15 lg:gap-x-30">
       <a
         href="tel:043 333 33 88"
