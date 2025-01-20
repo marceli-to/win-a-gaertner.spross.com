@@ -1,6 +1,5 @@
 <?php
 use Illuminate\Support\Facades\Route;
-use Livewire\Volt\Volt;
 use App\Models\Participant;
 
 /*
@@ -13,8 +12,6 @@ use App\Models\Participant;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Volt::route('/dashboard', 'dashboard')->name('page.dashboard');
 
 Route::view('/', 'home')->name('page.home');
 Route::view('/wettbewerb', 'competition')->name('page.competition');
@@ -32,3 +29,6 @@ Route::get('/email/bestaetigen/{uuid}', function ($uuid) {
     return redirect()->route('page.thanks', [$participant->uuid]);
   }
 })->name('page.verify');
+
+Route::view('/dashboard', 'dashboard')->name('page.dashboard');
+

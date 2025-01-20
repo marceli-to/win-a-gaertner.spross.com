@@ -1,13 +1,8 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-29737799.css",
+    "file": "assets/app-8e2d95d3.css",
     "isEntry": true,
     "src": "resources/css/app.css"
-  },
-  "resources/css/dashboard.css": {
-    "file": "assets/dashboard-f464c5c4.css",
-    "isEntry": true,
-    "src": "resources/css/dashboard.css"
   },
   "resources/fonts/TheSans-B5Plain.woff": {
     "file": "assets/TheSans-B5Plain-75c054f6.woff",
@@ -42,7 +37,7 @@
     "src": "resources/fonts/TheSans-B8ExtraBold.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-70eb5e5c.js",
+    "file": "assets/app-414e6184.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
