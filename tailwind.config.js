@@ -7,6 +7,8 @@ export default {
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
     "./resources/**/*.vue",
+    "./vendor/livewire/flux-pro/stubs/**/*.blade.php",
+    "./vendor/livewire/flux/stubs/**/*.blade.php",
   ],
 
   theme: {
@@ -30,10 +32,10 @@ export default {
         'meadow': '#A8E189',
         'copper': '#D65F28',
         'fern-sat': '#4D9526',
-
       },
 
       fontFamily: {
+        sans: ['Inter', 'sans-serif'],
         'thesans-regular': ['TheSansRegular', ...defaultTheme.fontFamily.sans],
         'thesans-semibold': ['TheSansSemibold', ...defaultTheme.fontFamily.sans],
         'thesans-bold': ['TheSansBold', ...defaultTheme.fontFamily.sans],

@@ -1,8 +1,13 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-696fde37.css",
+    "file": "assets/app-29737799.css",
     "isEntry": true,
     "src": "resources/css/app.css"
+  },
+  "resources/css/dashboard.css": {
+    "file": "assets/dashboard-f464c5c4.css",
+    "isEntry": true,
+    "src": "resources/css/dashboard.css"
   },
   "resources/fonts/TheSans-B5Plain.woff": {
     "file": "assets/TheSans-B5Plain-75c054f6.woff",
