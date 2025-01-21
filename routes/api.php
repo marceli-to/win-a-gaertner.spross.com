@@ -15,15 +15,12 @@ use App\Http\Controllers\Api\ParticipantController;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
-
-
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
   return $request->user();
 });
 
-Route::get('/participants', [ParticipantController::class, 'index']);
-Route::put('/participant/{participant}', [ParticipantController::class, 'update']);
-Route::delete('/participant/{participant}', [ParticipantController::class, 'destroy']);
+Route::middleware('auth:sanctum')->group(function () {
+  Route::get('/participants', [ParticipantController::class, 'index']);
+  Route::put('/participant/{participant}', [ParticipantController::class, 'update']);
+  Route::delete('/participant/{participant}', [ParticipantController::class, 'destroy']);
+});

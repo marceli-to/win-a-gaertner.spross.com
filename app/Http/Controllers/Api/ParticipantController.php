@@ -11,17 +11,6 @@ class ParticipantController extends Controller
     return response()->json(Participant::with('state')->get());
   }
 
- public function store(Request $request)
-  {
-    $participant = Participant::create($request->all());
-    return response()->json($participant, 201);
-  }
-
-  public function show(Participant $participant)
-  {
-    return response()->json($participant);
-  }
-
   public function update(Participant $participant, Request $request)
   {
     $participant->update([
