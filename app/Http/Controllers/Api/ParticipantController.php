@@ -24,4 +24,50 @@ class ParticipantController extends Controller
     $participant->delete();
     return response()->json(['message' => 'Participant deleted successfully']);
   }
+
+  public function export()
+  {
+      $participants = Participant::all();
+      
+      // Set headers for file download
+      header('Content-Type: text/csv; charset=utf-8');
+      header('Content-Disposition: attachment; filename="win-a-gaertner-teilnehmer.csv"');
+      
+      // Create file handle
+      $csv = fopen('php://output', 'w');
+      
+      // Set semicolon delimiter
+      fprintf($csv, chr(0xEF).chr(0xBB).chr(0xBF)); // Add UTF-8 BOM for Excel
+      
+      // Write headers
+      fputcsv($csv, [
+          'Vorname/Name',
+          'Strasse/Nr.',
+          'PLZ',
+          'Ort',
+          'E-Mail',
+          'Telefon',
+          'Sofortpreis',
+          'E-Mail bestätigt am',
+          'Status'
+      ], ';', '"', "\\");
+      
+      // Write data
+      foreach ($participants as $participant) {
+          fputcsv($csv, [
+              $participant->name,
+              $participant->street,
+              $participant->zip,
+              $participant->city,
+              $participant->email,
+              $participant->phone,
+              $participant->selection,
+              $participant->email_verified_at ? date('d.m.Y', strtotime($participant->email_verified_at)) : null,
+              $participant->state->name
+          ], ';', '"', "\\");
+      }
+      
+      fclose($csv);
+      exit;
+  }
 }

@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\ParticipantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,5 +35,9 @@ Route::get('/email/bestaetigen/{uuid}', function ($uuid) {
 Route::get('/dashboard', function () {
   return view('dashboard');
 })->middleware(['auth', 'verified'])->name('page.dashboard');
+
+Route::get('/api/participants/export', [ParticipantController::class, 'export'])
+  ->middleware(['auth', 'verified'])
+  ->name('page.participants.export');
 
 require __DIR__.'/auth.php';

@@ -1,6 +1,20 @@
 <template>
   <div class="py-20">
-    <h1 class="text-4xl mb-24">Teilnehmer:innen</h1>
+    <div class="flex justify-between relative pr-20">
+      <h1 class="text-4xl mb-24">Teilnehmer:innen</h1>
+      <div class="text-md flex gap-10">
+        <a 
+            href="/api/participants/export"
+            target="_blank"
+          >
+          CSV-Export
+        </a>
+        <a 
+          href="/logout">
+          Logout
+        </a>
+      </div>
+    </div>
     <div>
       <table class="min-w-[1000px] w-full">
         <thead class="border-b-2 border-b-gray-100 font-thesans-bold">
@@ -11,7 +25,6 @@
             <th class="px-2 py-8 text-left text-sm font-medium">Sofortpreis</th>
             <th class="px-2 py-8 text-left text-sm font-medium">Bestätigt am</th>
             <th class="px-2 py-8 text-sm font-medium text-right pr-10">Status</th>
-            <!-- <th></th> -->
           </tr>
         </thead>
         <tbody class="bg-white divide-y-2 divide-gray-100">
@@ -46,11 +59,6 @@
                 {{ participant.state.name }}
                 </a>
             </td>
-            <!-- <td class="px-2 py-8 whitespace-nowrap text-sm text-right">
-              <button @click="deleteParticipant(participant.id)"  class="text-red-600 hover:text-red-900">
-                Löschen
-              </button>
-            </td> -->
           </tr>
         </tbody>
       </table>
