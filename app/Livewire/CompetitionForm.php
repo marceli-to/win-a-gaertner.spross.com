@@ -34,6 +34,8 @@ class CompetitionForm extends Component
 
   public $is_submitted = FALSE;
 
+  protected $state = 1;
+
   public function save()
   {
     $this->validate();
@@ -46,6 +48,7 @@ class CompetitionForm extends Component
         'street' => $this->street,
         'zip' => $this->zip,
         'city' => $this->city,
+        'state_id' => $this->state,
         'phone' => $this->phone,
       ]
     );

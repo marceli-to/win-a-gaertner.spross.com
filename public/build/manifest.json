@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-8e2d95d3.css",
+    "file": "assets/app-7ae11f5e.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -37,7 +37,7 @@
     "src": "resources/fonts/TheSans-B8ExtraBold.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-414e6184.js",
+    "file": "assets/app-265516a6.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }

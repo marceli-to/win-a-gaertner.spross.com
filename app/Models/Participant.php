@@ -13,6 +13,7 @@ class Participant extends Model
     'city',
     'email',
     'phone',
+    'state_id',
     'email_verified_at',
   ];
 
@@ -22,5 +23,10 @@ class Participant extends Model
     static::creating(function ($model) {
       $model->uuid = Str::uuid();
     });
+  }
+
+  public function state()
+  {
+    return $this->belongsTo(State::class);
   }
 }

@@ -1,6 +1,7 @@
 <?php
+
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Models\Participant;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +13,7 @@ use App\Models\Participant;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 
 Route::view('/', 'home')->name('page.home');
 Route::view('/wettbewerb', 'competition')->name('page.competition');
@@ -30,5 +32,8 @@ Route::get('/email/bestaetigen/{uuid}', function ($uuid) {
   }
 })->name('page.verify');
 
-Route::view('/dashboard', 'dashboard')->name('page.dashboard');
+Route::get('/dashboard', function () {
+  return view('dashboard');
+})->middleware(['auth', 'verified'])->name('page.dashboard');
 
+require __DIR__.'/auth.php';

@@ -38,9 +38,9 @@
         <x-buttons.secondary 
           href="https://www.spross.com"
           target="_blank"
-          class="{{ !Route::is('page.competition') ? 'bg-white !text-fern' : 'bg-fern text-white' }} flex items-end group">
+          class="{{ !Route::is('page.competition') && !Route::is('page.dashboard') ? 'bg-white !text-fern' : 'bg-fern text-white' }} flex items-end group">
           spross.com
-          <x-icons.arrow class="w-12 lg:w-14 h-auto mt-2 ml-4 group-hover:translate-x-3 transition-transform {{ Route::is('page.competition') ? 'text-white' : 'text-fern' }}" />
+          <x-icons.arrow class="w-12 lg:w-14 h-auto mt-2 ml-4 group-hover:translate-x-3 transition-transform {{ Route::is('page.competition') || Route::is('page.dashboard') ? 'text-white' : 'text-fern' }}" />
         </x-buttons.secondary>
         <a 
           href="https://www.facebook.com/Spross.Gruppe" 
@@ -48,7 +48,7 @@
           rel="noopener noreferrer"
           title="Spross auf Facebook"
           class="inline-block group">
-          <x-icons.facebook class="{{ Route::is('page.competition') ? 'text-fern' : 'text-white' }}" />
+          <x-icons.facebook class="{{ Route::is('page.competition') || Route::is('page.dashboard') ? 'text-fern' : 'text-white' }}" />
         </a>
         <a 
           href="https://www.linkedin.com/company/spross" 
@@ -56,7 +56,7 @@
           rel="noopener noreferrer"
           title="Spross auf LinkedIn"
           class="inline-block group">
-          <x-icons.linkedin class="{{ Route::is('page.competition') ? 'text-fern' : 'text-white' }}" />
+          <x-icons.linkedin class="{{ Route::is('page.competition') || Route::is('page.dashboard') ? 'text-fern' : 'text-white' }}" />
         </a>
       </div>
     </div>
