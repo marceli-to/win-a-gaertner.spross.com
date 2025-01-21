@@ -1,6 +1,6 @@
 <template>
   <div class="py-20">
-    <h1 class="text-4xl mb-24">Teilnehmer</h1>
+    <h1 class="text-4xl mb-24">Teilnehmer:innen</h1>
     <div>
       <table class="min-w-[1000px] w-full">
         <thead class="border-b-2 border-b-gray-100 font-thesans-bold">
