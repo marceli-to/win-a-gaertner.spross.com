@@ -28,17 +28,21 @@ class ParticipantController extends Controller
   public function export()
   {
       $participants = Participant::all();
-      
+
       // Set headers for file download
       header('Content-Type: text/csv; charset=utf-8');
       header('Content-Disposition: attachment; filename="win-a-gaertner-teilnehmer.csv"');
-      
+      header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+      header('Cache-Control: post-check=0, pre-check=0', false);
+      header('Pragma: no-cache');
+      header('Expires: 0');
+
       // Create file handle
       $csv = fopen('php://output', 'w');
-      
+
       // Set semicolon delimiter
       fprintf($csv, chr(0xEF).chr(0xBB).chr(0xBF)); // Add UTF-8 BOM for Excel
-      
+
       // Write headers
       fputcsv($csv, [
           'Vorname/Name',
@@ -51,7 +55,7 @@ class ParticipantController extends Controller
           'E-Mail bestätigt am',
           'Status'
       ], ';', '"', "\\");
-      
+
       // Write data
       foreach ($participants as $participant) {
           fputcsv($csv, [
@@ -66,7 +70,7 @@ class ParticipantController extends Controller
               $participant->state->name
           ], ';', '"', "\\");
       }
-      
+
       fclose($csv);
       exit;
   }
