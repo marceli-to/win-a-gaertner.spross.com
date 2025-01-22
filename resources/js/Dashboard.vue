@@ -3,13 +3,13 @@
     <div class="flex justify-between relative pr-20">
       <h1 class="text-4xl mb-24">Teilnehmer:innen</h1>
       <div class="text-md flex gap-10">
-        <a 
+        <a
             href="/api/participants/export"
             target="_blank"
           >
           CSV-Export
         </a>
-        <a 
+        <a
           href="/logout">
           Logout
         </a>
@@ -28,7 +28,7 @@
           </tr>
         </thead>
         <tbody class="bg-white divide-y-2 divide-gray-100">
-          <tr 
+          <tr
             class="text-md leading-none"
             v-for="participant in participants" :key="participant.id">
             <td class="px-2 py-8 whitespace-nowrap align-middle">
@@ -47,7 +47,7 @@
               {{ formatDate(participant.email_verified_at) }}
             </td>
             <td class="px-2 py-8 whitespace-nowrap align-middle text-right">
-              <a 
+              <a
                 href="javascript:;"
                 @click="openEditDialog(participant)"
                 class="px-12 py-6 inline-flex text-sm tracking-wider uppercase leading-none rounded-full"
@@ -64,13 +64,13 @@
       </table>
     </div>
 
-    <div 
-      v-if="showEditDialog" 
+    <div
+      v-if="showEditDialog"
       class="fixed inset-0 bg-black/50 flex items-center justify-center">
       <div class="bg-white rounded-md p-30 max-w-md w-full">
         <h2 class="text-xl font-thesans-bold mb-15">Status</h2>
-        <select 
-          v-model="selectedState" 
+        <select
+          v-model="selectedState"
           class="bg-white text-lg py-12 w-full !ring-0 focus:ring-0 !border-fern/50 accent-fern appearance-none border-2 mb-30">
           <option value="1">Offen</option>
           <option value="2">In Bearbeitung</option>
@@ -111,7 +111,7 @@ const fetchParticipants = async () => {
 // Open edit dialog
 const openEditDialog = (participant) => {
   selectedParticipant.value = participant
-  selectedState.value = participant.state
+  selectedState.value = participant.state.id
   showEditDialog.value = true
 }
 
@@ -128,7 +128,7 @@ const updateParticipantState = async () => {
     await axios.put(`/api/participant/${selectedParticipant.value.id}`, {
       state: selectedState.value
     })
-    
+
     // Update local state
     const index = participants.value.findIndex(p => p.id === selectedParticipant.value.id)
     if (index !== -1) {
@@ -141,6 +141,7 @@ const updateParticipantState = async () => {
       if (selectedState.value === '3') {
         participants.value[index].state.name = 'Abgeschlossen'
       }
+      participants.value[index].state.id = selectedState.value
     }
     closeEditDialog()
   } catch (error) {
@@ -151,7 +152,7 @@ const updateParticipantState = async () => {
 // Delete participant
 const deleteParticipant = async (id) => {
   if (!confirm('Are you sure you want to delete this participant?')) return
-  
+
   try {
     await axios.delete(`/api/participants/${id}`)
     participants.value = participants.value.filter(p => p.id !== id)
