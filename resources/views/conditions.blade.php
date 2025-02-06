@@ -12,7 +12,7 @@
 
         <h4 class="font-thesans-extrabold mb-[1.2em]">1. Teilnahme</h4>
 
-        <p>1.1.<br>Die Teilnahme am Wettbewerb ist auf unbeschränkt handlungsfähige natürliche Personen mit Wohnsitz in der Schweiz beschränkt, die 18 Jahre oder älter sind (nachfolgend einheitlich die «Teilnehmer»). Pro Person ist nur eine Teilnahme erlaubt.
+        <p>1.1.<br>Die Teilnahme am Wettbewerb ist auf unbeschränkt handlungsfähige natürliche Personen mit Wohnsitz im Grossraum Zürich beschränkt, die 18 Jahre oder älter sind (nachfolgend einheitlich die «Teilnehmer»). Pro Person ist nur eine Teilnahme erlaubt.
         </p><p>
         1.2.<br>Die Teilnahme am Wettbewerb erfolgt durch Ausfüllen des angebotenen Formulars, beispielsweise auf der Wettbewerb-Website. Die erforderlichen Angaben für die Teilnahme müssen vollständig und wahrheitsgetreu sein. Die Teilnahme ist alternativ auch per E-Mail an garten@spross.com mit gleichen Gewinnchancen möglich.
         </p><p>
